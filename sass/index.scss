@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import 'variables';
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "Poppins", sans-serif;
+    background: $background-color;
+}
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10rem;
+    h1{
+        font-size: 3rem;
+        color: $white
+    }
+}
+form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    input{
+        height: 3rem;
+        width: 22rem;
+        border-radius: 3rem;
+        border-width: 0;
+        padding: 1rem;
+        font-size: 1rem;
+    }
+    button{
+        margin-left: 2rem;
+        height: 3rem;
+        width: 3rem;
+        background: $background-color;
+        border: 0;
+        cursor: pointer;
+        transition: .5s ease all;
+        
+        i{
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: $white;
+        }
+    }
+}
+ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+    div{
+        display: flex;
+        .delete-button, .completed-button{
+            height: 3rem;
+            width: 3rem;
+            margin-top: 1rem;
+            background: $white;
+            border: none;
+            i{
+                font-size: 2rem;
+                color: $background-color;
+                cursor: pointer;
+                pointer-events: none;
+            }
+        }
+    }
+    .list-item{
+        margin-top: 1rem;
+        background: $white;
+        height: 3rem;
+        width: 30rem;
+        padding-top: .7rem; 
+        padding-left: 1rem;
+    }
+}
+.fall{
+    transform:rotateZ(30deg);
+    opacity: 0;
+    transition: .5s ease;
+}
+.completed{
+    text-decoration: line-through;
+    transition: .5s ease;
+}
